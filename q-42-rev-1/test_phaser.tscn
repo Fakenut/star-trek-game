@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c46217q4u5mn0"]
+
+[ext_resource type="PackedScene" uid="uid://o1c8cb2bb6fq" path="res://ships/GalaxyClass.tscn" id="1_wf2d2"]
+
+[node name="TestPhaser" type="Node2D"]
+
+[node name="GalaxyClass" parent="." instance=ExtResource("1_wf2d2")]

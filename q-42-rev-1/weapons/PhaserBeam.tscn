@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bol01fiojk8co"]
+
+[ext_resource type="Script" uid="uid://bwwoqxp567y6" path="res://weapons/PhaserBeam.gd" id="1_oo3mc"]
+[ext_resource type="Texture2D" uid="uid://beacesv7hnkb0" path="res://sprites/beam.png" id="2_ynm85"]
+
+[node name="PhaserBeam" type="Node2D"]
+script = ExtResource("1_oo3mc")
+
+[node name="Line2D_Start" type="Line2D" parent="."]
+z_index = 1002
+width = 2.0
+default_color = Color(1.353256, 1.353256, 1.353256, 1)
+
+[node name="Line2D_End" type="Line2D" parent="."]
+z_index = 1001
+width = 6.0
+default_color = Color(1.353256, 1.353256, 1.353256, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ynm85")

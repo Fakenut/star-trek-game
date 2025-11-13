@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://o1c8cb2bb6fq"]
+
+[ext_resource type="Script" uid="uid://b12tnf5c2846m" path="res://ships/GalaxyClass.gd" id="1_kph1e"]
+[ext_resource type="Texture2D" uid="uid://ocoorw45bqfa" path="res://sprites/Enterprise D_hell.png" id="2_uf2r2"]
+[ext_resource type="Script" uid="uid://xc5rq4a43nbx" path="res://weapons/WeaponSystem.gd" id="3_uf2r2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aq1pr"]
+radius = 70.0
+height = 168.0
+
+[node name="GalaxyClass" type="CharacterBody2D"]
+position = Vector2(1280, 540)
+script = ExtResource("1_kph1e")
+science_probes = null
+max_energy = null
+impulse_speed = null
+warp_capable = null
+warp_speed = null
+rotation_speed = null
+accel = null
+deaccel = null
+ship_faction = null
+ship_class = null
+ship_name = null
+is_destroyable = null
+is_targetable = null
+max_health = null
+weapon_configs = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("2_uf2r2")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 30)
+polygon = PackedVector2Array(-52, -2, -56, 78, -52, 86, -36, 86, -31, 79, -30, 72, -7, 69, 13, 69, 36, 72, 36, 78, 40, 86, 56, 86, 60, 74, 56, -2, 52, -6, -48, -6)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -44)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_aq1pr")
+
+[node name="WeaponSystem" type="Node2D" parent="."]
+script = ExtResource("3_uf2r2")
+
+[node name="Phaser" type="Node2D" parent="WeaponSystem"]
