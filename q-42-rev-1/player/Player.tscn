@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://byu1y1oi8kref"]
+
+[ext_resource type="Script" uid="uid://crjherkyw0rua" path="res://player/Player.gd" id="1_xhfnw"]
+[ext_resource type="Script" uid="uid://dxtqh8yuproxe" path="res://weapons/WeaponManager.gd" id="2_3c3w1"]
+[ext_resource type="PackedScene" uid="uid://o1c8cb2bb6fq" path="res://ships/GalaxyClass.tscn" id="2_wnvi2"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_xhfnw")
+current_ship = ExtResource("2_wnvi2")
+move_speed = null
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="WeaponManager" type="Node2D" parent="."]
+script = ExtResource("2_3c3w1")
+
+[node name="ShipContainer" type="Node2D" parent="."]

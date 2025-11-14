@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponConfig" load_steps=2 format=3 uid="uid://3qrrslukavkc"]
+
+[ext_resource type="Script" uid="uid://cduhgv2ym7mvc" path="res://weapons/WeaponConfig.gd" id="1_pok5y"]
+
+[resource]
+script = ExtResource("1_pok5y")
+weapon_name = "Quantum Torpedo"
+weapon_type = "projectile"
+fire_rate = 1.5
+damage = 120.0
+projectile_speed = 200.0
+projectile_lifetime = 4.0
+metadata/_custom_type_script = "uid://cduhgv2ym7mvc"
