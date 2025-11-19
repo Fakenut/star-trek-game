@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdtcscn6vq41m"]
+
+[ext_resource type="Script" uid="uid://cedmpo0jy434s" path="res://Scripts/PhaserBeam.gd" id="1_ob7b6"]
+[ext_resource type="Texture2D" uid="uid://bsl4i25hh552y" path="res://Sprites/circle_05.png" id="2_1bgkg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ob7b6"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1bgkg"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gei54"]
+blend_mode = 1
+
+[node name="PhaserBeam" type="Node2D"]
+script = ExtResource("1_ob7b6")
+beam_duration = 0.2
+
+[node name="BackgroundBeam" type="Line2D" parent="."]
+material = SubResource("CanvasItemMaterial_ob7b6")
+width = 12.0
+default_color = Color(0.8241868, 0.16404146, 7.70092e-07, 1)
+end_cap_mode = 2
+antialiased = true
+
+[node name="MainBeam" type="Line2D" parent="."]
+material = SubResource("CanvasItemMaterial_1bgkg")
+points = PackedVector2Array(1791, 580)
+width = 6.0
+default_color = Color(0.9933772, 0.57123643, 0, 1)
+end_cap_mode = 2
+antialiased = true
+
+[node name="GlowEffect" type="Sprite2D" parent="."]
+modulate = Color(1, 0.10980392, 0.20784314, 0.40784314)
+self_modulate = Color(1, 0.9058309, 0.66668326, 0.8)
+material = SubResource("CanvasItemMaterial_gei54")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_1bgkg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true

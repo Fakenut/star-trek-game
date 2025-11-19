@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://nduuu8eu40km"]
+
+[ext_resource type="Script" uid="uid://be7578ke0j36e" path="res://Scripts/EditableRing.gd" id="1_efhu3"]
+
+[sub_resource type="Curve2D" id="Curve2D_efhu3"]
+
+[node name="EditableRing" type="Node2D"]
+script = ExtResource("1_efhu3")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(676, 66, 474, 276, 128, 165, 0, 0)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_efhu3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
+
+[node name="PathFollow2D2" type="PathFollow2D" parent="Path2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D2"]

@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://nduuu8eu40km"]
+
+[ext_resource type="Script" uid="uid://be7578ke0j36e" path="res://Scripts/PhaserBank.gd" id="1_efhu3"]
+[ext_resource type="Texture2D" uid="uid://ocoorw45bqfa" path="res://Sprites/Enterprise D_hell.png" id="2_jnkh8"]
+
+[sub_resource type="Curve2D" id="Curve2D_efhu3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -16, 0, 1.0684249, 33.39676, -1.0684249, -33.39676, -55, -40, -16.439016, -0.20846575, 16.439016, 0.20846575, 0, -83, 0, -31.720537, 0, 31.720537, 55, -41, 0, 0, 0, 0, 18, 0)
+}
+point_count = 5
+
+[node name="PhaserBank" type="Node2D"]
+script = ExtResource("1_efhu3")
+
+[node name="Schiffsmodell" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("2_jnkh8")
+
+[node name="CurvePoints" type="Node2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+width = 1.0
+default_color = Color(1, 0.64705884, 0, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_efhu3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-16, 0)
+rotates = false
+loop = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
+scale = Vector2(0.5, 0.5)
+
+[node name="PathFollow2D2" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-16, 0)
+rotation = -2.9692369
+loop = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D2"]
+scale = Vector2(0.5, 0.5)

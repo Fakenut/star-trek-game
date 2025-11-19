@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cidblwos2brr3"]
+
+[ext_resource type="Script" uid="uid://deor8qbrlpqit" path="res://Scripts/EditableRing.gd" id="1_dpahc"]
+
+[sub_resource type="Curve2D" id="Curve2D_cva6u"]
+
+[node name="Path2d" type="Path2D"]
+position = Vector2(1280, 540)
+curve = SubResource("Curve2D_cva6u")
+script = ExtResource("1_dpahc")

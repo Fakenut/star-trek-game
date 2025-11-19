@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4pkb4yppy0sl"]
+
+[ext_resource type="Script" uid="uid://dj6mpnby8jmt4" path="res://TestWorld.gd" id="1_i7llj"]
+[ext_resource type="PackedScene" uid="uid://3x3upf0rin3v" path="res://Scenes/Player/Player.tscn" id="2_74u7v"]
+[ext_resource type="Script" uid="uid://cl1j10kuvsbct" path="res://Scripts/ShipData.gd" id="3_74u7v"]
+
+[sub_resource type="Resource" id="Resource_cjeqb"]
+script = ExtResource("3_74u7v")
+metadata/_custom_type_script = "uid://cl1j10kuvsbct"
+
+[node name="TestWorld" type="Node2D"]
+z_index = -99
+position = Vector2(1280, 540)
+script = ExtResource("1_i7llj")
+
+[node name="Player" parent="." instance=ExtResource("2_74u7v")]
+current_ship_data = SubResource("Resource_cjeqb")

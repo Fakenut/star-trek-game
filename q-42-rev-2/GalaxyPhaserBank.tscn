@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj2ju8wj1hrj6"]
+
+[ext_resource type="PackedScene" uid="uid://nduuu8eu40km" path="res://Scenes/Weapons/PhaserBank.tscn" id="1_ku033"]
+
+[node name="EditableRing" instance=ExtResource("1_ku033")]
